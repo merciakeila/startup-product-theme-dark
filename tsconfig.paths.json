@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "isolatedModules": false,
+    "downlevelIteration": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types/"
+    ],
+    "paths": {
+      "*": [
+        "*"
+      ],
+      "src/*": [
+        "src/*"
+      ],
+      "_components/*": [
+        "src/components/*"
+      ],
+      "_UI": [
+        "src/components/UI"
+      ],
+      "_UI/*": [
+        "src/components/UI/*"
+      ],
+      "_routes": [
+        "src/routes"
+      ],
+      "_routes/*": [
+        "src/routes/*"
+      ],
+      "_screens/*": [
+        "src/screens/*"
+      ],
+      "_services": [
+        "src/services"
+      ],
+      "_services/*": [
+        "src/services/*"
+      ],
+      "_errors": [
+        "src/errors"
+      ],
+      "_assets/*": [
+        "src/assets/*"
+      ]
+    }
+  }
+}
