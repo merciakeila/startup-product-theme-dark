@@ -1,11 +1,13 @@
-import React, { useCallback, useState } from "react";
-import styled from "styled-components";
+import React, { useState } from "react";
+import styled, {css} from "styled-components";
 import { NavLink } from "react-router-dom";
-import LinkButton from "_UI/Button/LinkButton";
 import logo from "_assets/startup-dark.png";
-import togglemenu from "_assets/togglemenu.svg";
+import open from "_assets/togglemenu.svg";
+import close from "_assets/close.svg";
 
-interface showScreenMenu {}
+interface effect {
+  show: boolean
+}
 
 const Header = styled.header`
   position: fixed;
@@ -30,21 +32,55 @@ const Container = styled.div`
 
 const Brand = styled(NavLink)`
   img {
-    max-width: 120px;
     width: 100%;
     height: auto;
   }
 `;
 
-const NavgationWrapper = styled.div``;
-
-const Nav = styled.div<showScreenMenu>`
-  display: none;
+const ToggleMenu = styled.img`
+  width: 25px;
+  height: 25px;
+  position: relative;
+  z-index: 9999;
 `;
 
-const ToggleMenu = styled.img``;
+const Navgation = styled.div<effect>`
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  ${(props) => props.show && css`
+    transition: background-color 0.8s;
+   ` }
+
+  ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  li {
+    padding: 40px 0;
+    text-decoration: none;
+    list-style: none;
+
+    a {
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+`;
 
 const Component: React.FC = () => {
+  const [menu, setMenu] = useState(true);
+  const showMenu = () => setMenu(!menu);
+
   return (
     <>
       <Header>
@@ -52,25 +88,25 @@ const Component: React.FC = () => {
           <Brand to="/">
             <img src={logo} alt="Startup Product Theme Dark" />
           </Brand>
-          <NavgationWrapper>
-            <ToggleMenu src={togglemenu} />
-            <Nav>
+          <ToggleMenu src={menu ? open : close} onClick={showMenu} />
+          {!menu && (
+            <Navgation show={true}>
               <ul>
                 <li>
-                  <NavLink to="/">Home</NavLink>
+                  <NavLink to="/" onClick={showMenu}>Home</NavLink>
                 </li>
                 <li>
-                  <NavLink to="#product">Product</NavLink>
+                  <NavLink to="#product" onClick={showMenu}>Product</NavLink>
                 </li>
                 <li>
-                  <NavLink to="#about">About</NavLink>
+                  <NavLink to="#about" onClick={showMenu}>About</NavLink>
                 </li>
                 <li>
-                  <NavLink to="#product">Contact</NavLink>
+                  <NavLink to="#product" onClick={showMenu}>Contact</NavLink>
                 </li>
               </ul>
-            </Nav>
-          </NavgationWrapper>
+            </Navgation>
+          )}
         </Container>
       </Header>
     </>
