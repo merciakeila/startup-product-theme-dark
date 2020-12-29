@@ -79,6 +79,14 @@ export const Dashboard = styled.img`
     top: 96%;
   }
 
+   @media only screen and (min-width: 1244px) and (max-height: 690px) {
+    top: 130%;
+  }
+
+  @media only screen and (min-width: 1244px) and (min-height: 691px) and (max-height: 800px) {
+    top: 110%;
+  }
+
   @media only screen and (max-width: 1243px) {
     position: static;
   }
