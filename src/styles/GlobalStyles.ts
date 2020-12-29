@@ -20,7 +20,7 @@ export default createGlobalStyle`
     margin-left: auto;
 
      @media only screen and (max-width: 960px) {
-      margin-top: 20px;
+      margin-top: 40px;
     }
 
     }
