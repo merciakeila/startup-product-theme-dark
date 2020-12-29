@@ -13,7 +13,7 @@ export const LinkButton = styled(Link)<ButtonStyle>`
   font-size: 18px;
 
   border-radius: 2px;
-  transition: background-color 0.2s;
+  transition: background-color 0.8s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,6 +25,14 @@ export const LinkButton = styled(Link)<ButtonStyle>`
       color: var(--white);
       border: none;
     `}
+
+  &:hover {
+    ${(props) =>
+      props.isBlue &&
+      css`
+        background: var(--secondy-lighting);
+      `}
+  }
 
   ${(props) =>
     props.isBlack &&
@@ -52,7 +60,7 @@ export const Button = styled.button<ButtonStyle>`
   color: var(--white);
   border: 1px solid var(--white);
   border-radius: 2px;
-  transition: background-color 0.2s;
+  transition: background-color 0.8s;
 
   ${(props) =>
     props.isBlack &&
@@ -78,4 +86,13 @@ export const Button = styled.button<ButtonStyle>`
       color: var(--white);
       border: none;
     `}
+
+  &:hover {
+    ${(props) =>
+      props.isBlue &&
+      css`
+        background: var(--secondy-lighting);
+        color: var(--primary);
+      `}
+  }
 `;

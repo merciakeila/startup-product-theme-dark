@@ -9,12 +9,20 @@ export default createGlobalStyle`
     }
 
     html, body, #root {
-      max-height: 100vh;
-      max-width: 100vw;
-      --webkit-font-smoothing: antialiased;
-      
-      width: 100%;
-      height: 100%;
+     max-width: 1240px;
+    box-sizing: border-box;
+    max-height: 100vh;
+    --webkit-font-smoothing: antialiased;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+
+     @media only screen and (max-width: 960px) {
+      margin-top: 20px;
+    }
+
     }
 
     *, button, input {
@@ -48,15 +56,10 @@ export default createGlobalStyle`
     :root {
       --primary: #181818;
       --secondy: #4553FE;
+      --secondy-lighting: #6871e3;
       --icons: #14D2B8;
       --white: #FDFDFD;
       --black-smooth: #343434;
     }
     
-`
-
-export const Container = styled.div`
-  max-width: 1240px;
-  margin: 0 auto;
-  box-sizing: border-box;
 `

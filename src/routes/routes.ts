@@ -1,6 +1,6 @@
-import Error404 from "../screens/pages/Page404";
-import Home from "../screens/Home";
-import Login from "../screens/Login";
+import Error404 from "_screens/pages/Page404";
+import Home from "_screens/Home";
+import Login from "_screens/Login";
 
 interface IRoutes {
   path: string
