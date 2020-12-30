@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 import { NavLink } from "react-router-dom";
 import logo from "_assets/startup-dark.png";
 import open from "_assets/togglemenu.svg";
 import close from "_assets/close.svg";
+import NavRoutes from "./NavRoutes";
 
 interface effect {
-  show: boolean
+  show: boolean;
 }
 
 const Header = styled.header`
@@ -52,9 +53,13 @@ const Navgation = styled.div<effect>`
   top: 0;
   width: 100%;
   height: 100vh;
-  ${(props) => props.show && css`
-    transition: background-color 0.8s;
-   ` }
+  ${(props) =>
+    props.show &&
+    css`
+      transition: transform: scale(1.3);
+      -webkit-transform: scale(1.3);
+      -moz-transform: scale(1.3) 0.8s;
+    `}
 
   ul {
     position: absolute;
@@ -64,7 +69,7 @@ const Navgation = styled.div<effect>`
   }
 
   li {
-    padding: 40px 0;
+    padding: 30px 0;
     text-decoration: none;
     list-style: none;
 
@@ -92,18 +97,11 @@ const Component: React.FC = () => {
           {!menu && (
             <Navgation show={true}>
               <ul>
-                <li>
-                  <NavLink to="/" onClick={showMenu}>Home</NavLink>
-                </li>
-                <li>
-                  <NavLink to="#product" onClick={showMenu}>Product</NavLink>
-                </li>
-                <li>
-                  <NavLink to="#about" onClick={showMenu}>About</NavLink>
-                </li>
-                <li>
-                  <NavLink to="#product" onClick={showMenu}>Contact</NavLink>
-                </li>
+                {NavRoutes.map(({ to, Name }) => (
+                  <li>
+                    <NavLink to={to}>{Name}</NavLink>
+                  </li>
+                ))}
               </ul>
             </Navgation>
           )}

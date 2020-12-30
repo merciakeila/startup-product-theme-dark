@@ -3,6 +3,7 @@ import { Header, Container } from "./styles";
 import { NavLink } from "react-router-dom";
 import LinkButton from "_UI/Button/LinkButton";
 import logo from "_assets/startup-dark.png";
+import NavRoutes from "./NavRoutes";
 
 const Component: React.FC = () => {
   return (
@@ -13,18 +14,13 @@ const Component: React.FC = () => {
             <img src={logo} alt="Startup Product Theme Dark" />
           </NavLink>
           <ul>
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="#product">Product</NavLink>
-            </li>
-            <li>
-              <NavLink to="#about">About</NavLink>
-            </li>
-            <li>
-              <NavLink to="#product">Contact</NavLink>
-            </li>
+            {NavRoutes.map(({ to, Name, hiddeDesktop }) => (
+              <li>
+                <NavLink to={to} hidden={hiddeDesktop}>
+                  {Name}
+                </NavLink>
+              </li>
+            ))}
           </ul>
           <LinkButton to="/login" isBlack>
             Login
