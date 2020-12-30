@@ -61,7 +61,7 @@ export const Buttons = styled.div`
 
     a {
       padding: 26px 60px;
-      
+
       & + a {
         margin-left: 0;
         margin-top: 30px;
@@ -73,22 +73,7 @@ export const Buttons = styled.div`
 export const Dashboard = styled.img`
   width: 100%;
   height: auto;
-  position: absolute;
-
-  @media only screen and (min-width: 1244px) {
-    top: 96%;
-  }
-
-   @media only screen and (min-width: 1244px) and (max-height: 690px) {
-    top: 130%;
-  }
-
-  @media only screen and (min-width: 1244px) and (min-height: 691px) and (max-height: 800px) {
-    top: 110%;
-  }
-
-  @media only screen and (max-width: 1243px) {
-    position: static;
-  }
-  
-`
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+`;
