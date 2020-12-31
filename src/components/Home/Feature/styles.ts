@@ -23,3 +23,8 @@ export const Feature = styled.img`
   height: auto;
   margin: 40px 0; 
 `;
+
+export const Icon = styled.img`
+  width: 20px;
+  height: 20px;
+`

@@ -1,9 +1,31 @@
 import React from "react";
-import { Feature, Container } from './styles'
-import feature from '_assets/features.png'
+import { Feature, Container, Icon } from "./styles";
+import feature from "_assets/features.png";
 import { Title, Paragraph } from "_components/UI/Text";
 
-const Component: React.FC = () => {
+import vetor from "_assets/vetor1.svg";
+import vetor2 from "_assets/vetor2.svg";
+
+type Props = {
+  icon: string;
+  title: string;
+  description: string;
+};
+
+const Props = [
+  {
+    icon: "vetor",
+    title: "Sou um titulo",
+    description: "Text exemplo",
+  },
+  {
+    icon: "vetor",
+    title: "Sou um titulo",
+    description: "Text exemplo",
+  },
+];
+
+const Component: React.FC<Props> = ({ icon, title, description }) => {
   return (
     <>
       <Container>
@@ -15,7 +37,9 @@ const Component: React.FC = () => {
         <div>
           <Feature src={feature} />
           <div>
-            <Paragraph>Conteúdo</Paragraph>
+            <Icon src={icon} />
+            <Title>{title}</Title>
+            <Paragraph>{description}</Paragraph>
           </div>
         </div>
       </Container>
