@@ -19,6 +19,7 @@ const Header = styled.header`
   top: 0;
   align-items: center;
   right: 0;
+  z-index: 9999;
 `;
 
 const Container = styled.div`
@@ -29,6 +30,7 @@ const Container = styled.div`
   align-items: center;
   padding: 0 20px;
   margin: 0 auto;
+  z-index: 9999;
 `;
 
 const Brand = styled(NavLink)`
@@ -50,6 +52,7 @@ const Navgation = styled.div<effect>`
   left: 0;
   right: 0;
   text-align: center;
+  z-index: 999;
   top: 0;
   width: 100%;
   height: 100vh;

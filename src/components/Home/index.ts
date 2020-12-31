@@ -1,1 +1,2 @@
-export {default as main} from "./main"
+export { default as Main } from './Main'
+export {default as Features} from './Feature'

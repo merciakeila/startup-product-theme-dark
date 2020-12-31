@@ -1,8 +1,9 @@
 import React from "react";
+import Error from '_components/Pages/Error404';
 
 const Error404: React.FC = () => (
   <>
-    <h1>Error 404</h1>
+    <Error/>
   </>
 );
 

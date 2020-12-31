@@ -77,3 +77,4 @@ export const Dashboard = styled.img`
   justify-content: center;
   margin: 0 auto;
 `;
+
