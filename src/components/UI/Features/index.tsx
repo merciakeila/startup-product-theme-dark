@@ -1,22 +1,21 @@
 import React from "react";
 import { Icon, Title, Content, Container } from "./styles";
-//import IFeature from "_models/IFeature";
-//import Features from "_models/IFeature";
 import features from "_mock/Feature";
+import IFeature from "_models/IFeature";
 
-const Component: React.FC = () => {
+type Props = {
+  features: IFeature[];
+};
+
+const Component: React.FC<Props> = (id, icon, title, description) => {
   return (
-    <>
-      {features.map(({ id, icon, title, description }) => (
-        <Container key={id}>
-          <div>
-            <Icon src={icon} />
-            <Title>{title}</Title>
-          </div>
-          <Content>{description}</Content>
-        </Container>
-      ))}
-    </>
+    <Container>
+      <div>
+        <Icon src={icon} />
+        <Title>{title}</Title>
+      </div>
+      <Content>{description}</Content>
+    </Container>
   );
 };
 
