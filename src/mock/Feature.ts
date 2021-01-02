@@ -8,19 +8,19 @@ const features: IFeature[] = [
     {
         id: 1,
         icon: source,
-        title: 'Sou um teste',
+        heading: 'Sou um teste',
         description: 'Sou um texto aleatório',
     },
     {
         id: 2,
         icon: intuitive,
-        title: 'Um exemplo',
+        heading: 'Um exemplo',
         description: 'Sou um texto aleatório',
     },
     {
         id: 3,
         icon: rules,
-        title: 'Um exemplo',
+        heading: 'Um exemplo',
         description: 'Sou um texto aleatório',
     },
     

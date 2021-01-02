@@ -60,6 +60,7 @@ export default createGlobalStyle`
       --icons: #14D2B8;
       --white: #FDFDFD;
       --black-smooth: #343434;
+      --grey-smooth: #555555;
     }
     
 `

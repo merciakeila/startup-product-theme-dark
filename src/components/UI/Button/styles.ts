@@ -8,7 +8,7 @@ export interface ButtonStyle {
 }
 
 export const LinkButton = styled(Link)<ButtonStyle>`
-  padding: 16px 60px;
+  padding: 20px 60px;
   font-weight: 600;
   font-size: 18px;
 

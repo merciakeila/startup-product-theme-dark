@@ -1,7 +1,7 @@
 interface IFeature {
     id: number,
     icon: string,
-    title: string,
+    heading: string,
     description: string
 }
 

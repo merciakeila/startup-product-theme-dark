@@ -18,7 +18,7 @@ export const Container = styled.section`
   }
 `;
 
-export const Feature = styled.img`
+export const Img = styled.img`
   width: 100%;
   height: auto;
   margin: 40px 0; 

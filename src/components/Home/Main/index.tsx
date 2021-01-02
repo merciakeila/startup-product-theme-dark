@@ -1,6 +1,6 @@
 import React from "react";
 import { Buttons, Container, Dashboard } from "./styles";
-import {Paragraph} from '_UI/Text'
+import { Paragraph } from "_UI/Text";
 import LinkButton from "_UI/Button/LinkButton";
 import dashboard from "_assets/dash_home.png";
 

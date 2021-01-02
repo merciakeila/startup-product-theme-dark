@@ -15,7 +15,7 @@ const Component: React.FC = () => {
           </NavLink>
           <ul>
             {NavRoutes.map(({ to, Name, hiddeDesktop }) => (
-              <li>
+              <li key={Name}>
                 <NavLink to={to} hidden={hiddeDesktop}>
                   {Name}
                 </NavLink>
