@@ -101,7 +101,7 @@ const Component: React.FC = () => {
             <Navgation show={true}>
               <ul>
                 {NavRoutes.map(({ to, Name }) => (
-                  <li>
+                  <li key={Name}>
                     <NavLink to={to}>{Name}</NavLink>
                   </li>
                 ))}

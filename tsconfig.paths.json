@@ -28,6 +28,12 @@
       ],
       "_assets/*": [
         "./src/assets/*"
+      ],
+      "_models/*": [
+        "./src/models/*"
+      ],
+      "_mock/*": [
+        "./src/mock/*"
       ]
     },
   }

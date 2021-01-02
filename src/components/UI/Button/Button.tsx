@@ -13,11 +13,9 @@ const Component: React.FC<ButtonProps> = ({
   ...rest
 }) => {
   return (
-    <>
-      <Button {...rest} isBlack={!!isBlack} isBlue={!!isBlue} type="button">
-        {children}
-      </Button>
-    </>
+    <Button {...rest} isBlack={!!isBlack} isBlue={!!isBlue} type="button">
+      {children}
+    </Button>
   );
 };
 

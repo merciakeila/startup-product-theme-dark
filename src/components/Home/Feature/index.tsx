@@ -1,31 +1,10 @@
 import React from "react";
-import { Feature, Container, Icon } from "./styles";
-import feature from "_assets/features.png";
-import { Title, Paragraph } from "_components/UI/Text";
+import { Feature, Container } from "./styles";
+import {Title, Paragraph} from '_UI/Text'
+import dashboard from "_assets/features.png";
+import Features from '_UI/Features';
 
-import vetor from "_assets/vetor1.svg";
-import vetor2 from "_assets/vetor2.svg";
-
-type Props = {
-  icon: string;
-  title: string;
-  description: string;
-};
-
-const Props = [
-  {
-    icon: "vetor",
-    title: "Sou um titulo",
-    description: "Text exemplo",
-  },
-  {
-    icon: "vetor",
-    title: "Sou um titulo",
-    description: "Text exemplo",
-  },
-];
-
-const Component: React.FC<Props> = ({ icon, title, description }) => {
+const Component: React.FC = () => {
   return (
     <>
       <Container>
@@ -35,11 +14,9 @@ const Component: React.FC<Props> = ({ icon, title, description }) => {
           freelancers who want a simple way to plan their schedule.
         </Paragraph>
         <div>
-          <Feature src={feature} />
+          <Feature src={dashboard} />
           <div>
-            <Icon src={icon} />
-            <Title>{title}</Title>
-            <Paragraph>{description}</Paragraph>
+            <Features/>
           </div>
         </div>
       </Container>
