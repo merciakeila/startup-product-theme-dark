@@ -15,7 +15,7 @@ const Component: React.FC = (Props) => {
   return (
     <>
       <Container>
-        <Title>Feature</Title>
+        <Title>FEATURES</Title>
         <Paragraph>
           Most calendars are designed for teams. Slate is designed for
           freelancers who want a simple way to plan their schedule.

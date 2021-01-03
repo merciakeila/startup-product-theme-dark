@@ -5,7 +5,7 @@ import LinkButton from "_UI/Button/LinkButton";
 import logo from "_assets/startup-dark.png";
 import NavRoutes from "./NavRoutes";
 
-const Component: React.FC = () => {
+const Desktop: React.FC = () => {
   return (
     <>
       <Header>
@@ -31,5 +31,5 @@ const Component: React.FC = () => {
   );
 };
 
-Component.displayName = "components/UI/Header";
-export default Component;
+Desktop.displayName = "components/UI/Header/Desktop";
+export default Desktop;

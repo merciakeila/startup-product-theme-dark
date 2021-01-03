@@ -11,7 +11,7 @@ type Props = {
   */
 };
 
-const Component: React.FC<Props> = ({ feature }) => {
+const Feauture: React.FC<Props> = ({ feature }) => {
   const { icon, heading, description } = feature;
 
   return (
@@ -25,5 +25,5 @@ const Component: React.FC<Props> = ({ feature }) => {
   );
 };
 
-Component.displayName = "components/Home/feature";
-export default Component;
+Feauture.displayName = "UI/Feauture";
+export default Feauture;

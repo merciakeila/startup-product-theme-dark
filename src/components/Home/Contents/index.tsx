@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Container } from "./styles";
+import { Title, Paragraph } from "_UI/Text";
+import { Section, Container } from "./styles";
 import Plans from "_UI/Plans";
 import PlansMock from "_mock/Plans";
 import IPlans from "_models/IPlans";
@@ -10,7 +11,12 @@ const Component: React.FC = () => {
     setPlans(PlansMock);
   }, []);
   return (
-    <>
+    <Section>
+      <Title>Contents</Title>
+      <Paragraph>
+        We focus on ergonomics and meeting you where you work. <br />
+        It's only a keystroke away.
+      </Paragraph>
       <Container>
         <div>
           {plans.map((plans, item) => (
@@ -18,7 +24,7 @@ const Component: React.FC = () => {
           ))}
         </div>
       </Container>
-    </>
+    </Section>
   );
 };
 

@@ -85,7 +85,7 @@ const Navgation = styled.div<effect>`
   }
 `;
 
-const Component: React.FC = () => {
+const Mobile: React.FC = () => {
   const [menu, setMenu] = useState(true);
   const showMenu = () => setMenu(!menu);
 
@@ -114,4 +114,5 @@ const Component: React.FC = () => {
   );
 };
 
-export default Component;
+Mobile.displayName = "components/UI/Header/Mobile";
+export default Mobile;

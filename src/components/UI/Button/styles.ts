@@ -11,7 +11,7 @@ export const LinkButton = styled(Link)<ButtonStyle>`
   padding: 20px 60px;
   font-weight: 600;
   font-size: 18px;
-
+  text-align: center;
   border-radius: 2px;
   transition: background-color 0.8s;
   display: flex;
