@@ -8,12 +8,9 @@ Most calendars are designed for teams. Slate is designed for freelancers who wan
 
 <br>
 
-![repositorio](./doc/img_readme.png)
-<br>
-<br>
+![repositorio](./doc/img_readme.png) <br> <br>
 
-Developer: Me.<br>
-Designer UI: [raoufbelakhdarph](https://www.uplabs.com/raoufbelakhdarph)
+Developer: Me.<br> Designer UI: [raoufbelakhdarph](https://www.uplabs.com/raoufbelakhdarph)
 
 ## 📌 Technologies
 

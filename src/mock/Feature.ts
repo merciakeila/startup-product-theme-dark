@@ -8,22 +8,22 @@ const features: IFeature[] = [
     {
         id: 1,
         icon: source,
-        heading: 'Sou um teste',
-        description: 'Sou um texto aleatório',
+        heading: `A single source \n of truth`,
+        description: 'When you add work to your Slate calendar we automatically calculate useful insights.',
     },
     {
         id: 2,
         icon: intuitive,
-        heading: 'Um exemplo',
-        description: 'Sou um texto aleatório',
+        heading: 'Intuitive \n interface',
+        description: 'When you add work to your Slate calendar we automatically calculate useful insights.',
     },
     {
         id: 3,
         icon: rules,
-        heading: 'Um exemplo',
-        description: 'Sou um texto aleatório',
+        heading: 'Or with rules',
+        description: 'When you add work to your Slate calendar we automatically calculate useful insights.',
     },
-    
+
 ]
 
 export default features;

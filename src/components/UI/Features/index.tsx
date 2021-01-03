@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, Title, Content, Container } from "./styles";
+import { HeadingBase, Icon, Title, Content, Container } from "./styles";
 import IFeature from "_models/IFeature";
 
 type Props = {
@@ -16,10 +16,10 @@ const Feauture: React.FC<Props> = ({ feature }) => {
 
   return (
     <Container>
-      <div>
+      <HeadingBase>
         <Icon src={icon} />
         <Title>{heading}</Title>
-      </div>
+      </HeadingBase>
       <Content>{description}</Content>
     </Container>
   );
