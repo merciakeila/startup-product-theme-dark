@@ -7,7 +7,7 @@ interface Nav extends LinkProps {
   hiddeDesktop?: boolean;
 }
 
-const Hidde = styled.div<Nav>`
+const Hidde = styled.li<Nav>`
   ${(props) =>
     props.hiddeDesktop &&
     css`

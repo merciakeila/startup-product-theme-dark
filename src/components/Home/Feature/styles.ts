@@ -7,20 +7,18 @@ export const Container = styled.section`
 	div {
 		justify-content: center;
 		display: flex;
-		flex: 0.3;
-		@media only screen and (min-width: 611px) and (max-width: 1280px) {
+		@media only screen and (min-width: 550px) and (max-width: 1280px) {
 			flex-wrap: wrap;
 			justify-content: center;
 			align-items: center;
 			flex-direction: column;
-			padding: 0px 20px;
 			text-align: center;
 		}
 
-		@media only screen and (max-width: 610px) {
+		@media only screen and (max-width: 649px) {
 			justify-content: center;
 			flex-wrap: wrap;
-			flex: 0.8;
+
 		}
 	}
 `
@@ -28,6 +26,12 @@ export const Container = styled.section`
 export const FeatureBase = styled.div`
 	flex-direction: column;
 	align-items: baseline;
+
+	@media only screen and (max-width: 649px) {
+		margin-right: auto;
+
+		margin-left: auto;
+	}
 `
 
 export const Img = styled.img`

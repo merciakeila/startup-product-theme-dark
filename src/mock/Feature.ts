@@ -9,19 +9,19 @@ const features: IFeature[] = [
         id: 1,
         icon: source,
         heading: `A single source \n of truth`,
-        description: 'When you add work to your Slate calendar we automatically calculate useful insights.',
+        description: 'When you add work to your \n Slate calendar we automatically \n calculate useful insights.',
     },
     {
         id: 2,
         icon: intuitive,
         heading: 'Intuitive \n interface',
-        description: 'When you add work to your Slate calendar we automatically calculate useful insights.',
+        description: 'When you add work to your \n Slate calendar we automatically \n calculate useful insights.',
     },
     {
         id: 3,
         icon: rules,
         heading: 'Or with rules',
-        description: 'When you add work to your Slate calendar we automatically calculate useful insights.',
+        description: 'When you add work to your \n Slate calendar we automatically \n calculate useful insights.',
     },
 
 ]
