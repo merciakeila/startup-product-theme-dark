@@ -14,7 +14,6 @@ export default createGlobalStyle`
     max-height: 100vh;
     --webkit-font-smoothing: antialiased;
     width: 100%;
-    height: 100%;
     margin-top: 100px;
     margin-right: auto;
     margin-left: auto;
@@ -62,5 +61,5 @@ export default createGlobalStyle`
       --black-smooth: #343434;
       --grey-smooth: #555555;
     }
-    
+
 `

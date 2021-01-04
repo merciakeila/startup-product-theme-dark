@@ -1,14 +1,14 @@
-import React from "react";
-import { Container} from "./styles";
+import React from 'react'
+import Gallery from '_UI/Gallery'
+import { Container } from './styles'
 
-const Component: React.FC = () => {
-  return (
-    <>
-      <Container>
-      </Container>
-    </>
-  );
-};
+const gallery: React.FC = () => {
+	return (
+		<>
+			<Gallery />
+		</>
+	)
+}
 
-Component.displayName = "components/Home/feature";
-export default Component;
+gallery.displayName = 'components/Home/Gallery'
+export default gallery

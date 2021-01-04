@@ -1,12 +1,12 @@
-import React from "react";
-import { Main, Features } from "_components/Home";
-import Plans from "_components/Home/Contents";
+import React from 'react'
+import { Main, Features, Plans, Gallery, Partners, Testemonials } from '_components/Home'
 const Home: React.FC = () => (
-  <>
-    <Main />
-    <Features />
-    <Plans />
-  </>
-);
+	<>
+		<Main />
+		<Features />
+		<Plans />
+		<Gallery />
+	</>
+)
 
-export default Home;
+export default Home
