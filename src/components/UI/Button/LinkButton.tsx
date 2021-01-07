@@ -14,7 +14,7 @@ const Component: React.FC<LinkButton> = ({
   ...rest
 }) => {
   return (
-    <LinkButton {...rest} isBlack={!!isBlack} isBlue={!!isBlue}>
+    <LinkButton {...rest} $isBlack={!!isBlack} $isBlue={!!isBlue}>
       {children}
     </LinkButton>
   );

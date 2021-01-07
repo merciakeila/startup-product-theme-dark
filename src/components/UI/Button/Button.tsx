@@ -13,7 +13,7 @@ const Component: React.FC<ButtonProps> = ({
   ...rest
 }) => {
   return (
-    <Button {...rest} isBlack={!!isBlack} isBlue={!!isBlue} type="button">
+    <Button {...rest} $isBlack={!!isBlack} $isBlue={!!isBlue} type="button">
       {children}
     </Button>
   );

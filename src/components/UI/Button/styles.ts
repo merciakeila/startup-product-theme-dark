@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 
 export interface ButtonStyle {
-  isBlack: boolean;
-  isBlue: boolean;
+  $isBlack: boolean;
+  $isBlue: boolean;
 }
 
 export const LinkButton = styled(Link)<ButtonStyle>`
@@ -19,7 +19,7 @@ export const LinkButton = styled(Link)<ButtonStyle>`
   justify-content: center;
 
   ${(props) =>
-    props.isBlue &&
+    props.$isBlue &&
     css`
       background: var(--secondy);
       color: var(--white);
@@ -28,14 +28,14 @@ export const LinkButton = styled(Link)<ButtonStyle>`
 
   &:hover {
     ${(props) =>
-      props.isBlue &&
+      props.$isBlue &&
       css`
         background: var(--secondy-lighting);
       `}
   }
 
   ${(props) =>
-    props.isBlack &&
+    props.$isBlack &&
     css`
       background: var(--primary);
       color: var(--white);
@@ -44,7 +44,7 @@ export const LinkButton = styled(Link)<ButtonStyle>`
 
   &:hover {
     ${(props) =>
-      props.isBlack &&
+      props.$isBlack &&
       css`
         background: var(--white);
         color: var(--primary);
@@ -63,7 +63,7 @@ export const Button = styled.button<ButtonStyle>`
   transition: background-color 0.8s;
 
   ${(props) =>
-    props.isBlack &&
+    props.$isBlack &&
     css`
       background: var(--primary);
       color: var(--white);
@@ -72,7 +72,7 @@ export const Button = styled.button<ButtonStyle>`
 
   &:hover {
     ${(props) =>
-      props.isBlack &&
+      props.$isBlack &&
       css`
         background: var(--white);
         color: var(--primary);
@@ -80,7 +80,7 @@ export const Button = styled.button<ButtonStyle>`
   }
 
   ${(props) =>
-    props.isBlue &&
+    props.$isBlue &&
     css`
       background: var(--secondy);
       color: var(--white);
@@ -89,7 +89,7 @@ export const Button = styled.button<ButtonStyle>`
 
   &:hover {
     ${(props) =>
-      props.isBlue &&
+      props.$isBlue &&
       css`
         background: var(--secondy-lighting);
         color: var(--primary);

@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import GalleryUI from '_UI/Gallery'
-import { Container, Img } from './styles'
+import { Img } from './styles'
 import GalleryMock from '_mock/Gallery'
-import IGallery from '_models/IGallery'
 
 const Gallery: React.FC = () => {
-	const [gallery, setGallery] = useState(GalleryMock)
+	const [gallery] = useState(GalleryMock)
 	const [galleryVisible, setGalleryVisible] = useState(false)
 	const [activeImage, setActiveImage] = useState(0)
 	return (
