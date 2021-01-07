@@ -11,6 +11,7 @@ export const Container = styled.div`
 	margin: 20px;
 	border-radius: 10px;
 	box-shadow: 0 10px 10px #00000033;
+	z-index: 999;
 `
 export const LeftButton = styled.button`
 	left: 0;
@@ -67,7 +68,7 @@ export const ButtonClose = styled.button`
 export const ImgSingle = styled.img`
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit: scale-down;
 	border-radius: 10px;
 `
 export const Thumb = styled.img``
