@@ -51,7 +51,7 @@ export const RightButton = styled.button`
 		background: linear-gradient(to right, #00000044, transparent);
 	}
 `
-export const ButtonClone = styled.button`
+export const ButtonClose = styled.button`
 	position: absolute;
 	background: #ffffff;
 	border: none;
@@ -60,6 +60,7 @@ export const ButtonClone = styled.button`
 	border-radius: 10px;
 	cursor: pointer;
 	font-size: 16px;
+	color: black;
 	bottom: 20px;
 `
 

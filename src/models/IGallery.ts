@@ -1,6 +1,6 @@
 interface IGallery {
     id: number,
-    img: string,
+	img: string,
     activeImg?: number,
 }
 

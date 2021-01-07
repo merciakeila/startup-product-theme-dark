@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi'
-import { ImgSingle, Container, LeftButton, RightButton, ButtonClone } from './styles'
+import { ImgSingle, Container, LeftButton, RightButton, ButtonClose } from './styles'
 import IGallery from '_models/IGallery'
 
 type Props = {
-	gallery: IGallery
+	gallery: IGallery[]
+	activeImage?: number
+	onClose(): void
 	/*
   icon: string;
   title: string;
@@ -12,30 +14,23 @@ type Props = {
   */
 }
 
-const Component: React.FC<Props> = ({ gallery }) => {
-	const { img, activeImg } = gallery
-	const [imagem, setImagem] = useState(activeImg)
-	const [close, setClose] = useState(true)
-	const onClose = () => setClose(!close)
-
-	const ImgBack = () => setImagem(imagem === 0 ? img.length - 1 : imagem - 1)
-	const ImgNext = () => setImagem(imagem === img.length - 1 ? 0 : imagem + 1)
+const Component: React.FC<Props> = ({ gallery, activeImage = 0, onClose }) => {
+	const [imageIndex, setImageIndex] = useState(activeImage)
+	const imgBack = () => setImageIndex(imageIndex === 0 ? gallery.length - 1 : imageIndex - 1)
+	const imgNext = () => setImageIndex(imageIndex === gallery.length - 1 ? 0 : imageIndex + 1)
+	const selectedImage = gallery[imageIndex].img
 
 	return (
-		<>
-			{!close && (
-				<Container>
-					<LeftButton type="button" onClick={ImgBack}>
-						<FiArrowLeft size={30} />
-					</LeftButton>
-					<ImgSingle src={img[imagem]} alt="Imagem" />
-					<ButtonClone onClick={onClose}>Fechar</ButtonClone>
-					<RightButton type="button" onClick={ImgNext}>
-						<FiArrowRight size={30} />
-					</RightButton>
-				</Container>
-			)}
-		</>
+		<Container>
+			<LeftButton type="button" onClick={imgBack}>
+				<FiArrowLeft size={30} />
+			</LeftButton>
+			<ImgSingle src={selectedImage} alt="Imagem" />
+			<ButtonClose onClick={onClose}>Fechar</ButtonClose>
+			<RightButton type="button" onClick={imgNext}>
+				<FiArrowRight size={30} />
+			</RightButton>
+		</Container>
 	)
 }
 
