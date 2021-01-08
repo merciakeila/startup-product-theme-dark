@@ -4,7 +4,7 @@ import { Img } from './styles'
 import { Title, Paragraph } from '_UI/Text'
 import GalleryMock from '_mock/Gallery'
 import { Section, Container } from './styles'
-import LinkButton from '_UI/Button/LinkButton'
+
 
 const Gallery: React.FC = () => {
 	const [gallery] = useState(GalleryMock)
@@ -35,9 +35,6 @@ const Gallery: React.FC = () => {
 			{galleryVisible && (
 				<GalleryUI gallery={gallery} activeImage={activeImage} onClose={() => setGalleryVisible(false)} />
 			)}
-			<LinkButton to="/gallery" isBlack>
-				See more
-			</LinkButton>
 		</Section>
 	)
 }

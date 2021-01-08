@@ -35,3 +35,8 @@ export const Img = styled.img`
 	cursor: pointer;
 	object-fit: cover;
 `
+
+export const ContainerButton = styled.div`
+	max-width: 206px;
+	margin: 20px auto;
+`

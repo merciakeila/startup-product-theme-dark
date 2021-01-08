@@ -1,10 +1,8 @@
 import React from 'react'
-import Gallery from '_UI/Gallery'
+import Gallery from '_components/Home/Gallery'
 
 const GalleryPage: React.FC = () => (
-	<>
-		<h1>Gallery</h1>
-	</>
+		<Gallery/>
 )
 
 export default GalleryPage
